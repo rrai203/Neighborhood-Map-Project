@@ -26,6 +26,11 @@ git clone project from github repository
 
 Open index.html in folder
 
+## Using guide
+
+User can click on set marker to pop up information window same can be done while clicking on the name on the list.
+Search bar filter down the list and shows the marker corresponsing to the list. 
+
 ## Built With
 
 *Bootstrap 4
@@ -44,3 +49,4 @@ Open index.html in folder
 * https://getbootstrap.com/docs/4.1/components/buttons/
 * https://www.w3schools.com/
 * https://api.jquery.com/
+*got help from some github repositories like filtering the list.
