@@ -98,9 +98,6 @@ function initMap() {
 
                 //FourSquare API request URL
                 var foursquareURL = 'https://api.foursquare.com/v2/venues/search?ll=' + placeItem.lat + ',' + placeItem.long + '&client_id=FVRS5ANVLZT45L1C43VBXUVKNVRQBMUZ3W2HIOEG2KYCRL23&client_secret=54SO4U0OUT2XSKQRSFD5GXE0AB4ZVHMBATLBVT5PEVEOGTVS&v=20180909' + '&query=' + placeItem.name;
-                var RequestTimeout = setTimeout(function() {
-                    alert("Failed to get foursquare resource");
-                }, 7000);
 
                 $.ajax({
                     url: foursquareURL,
@@ -121,8 +118,11 @@ function initMap() {
                             openedInfoWindow = null;
                         });
 
-                        clearTimeout(RequestTimeout);
-                    }
+                        
+                    },
+                    error: function(jqXHR, exception) {
+                                    window.alert('Failed to load Content from Foursquare');
+                                }
                 });
                 return false;
             });
