@@ -51,7 +51,7 @@ function initMap() {
 
         map = new google.maps.Map(document.getElementById("map"),
             mapOptions);
-
+       
 
         //Create observable array of markers
         self.markerArray = ko.observableArray(locations);
@@ -166,8 +166,13 @@ function initMap() {
             }
             return string.substring(0, startsWith.length) === startsWith;
         };
-
+    
     };
     //Call the viewModel function
     ko.applyBindings(new viewModel());
+
+}
+//error handling
+function mapErrorHandling() {
+    alert("unable to fetch resources from google maps");
 }
